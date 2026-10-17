@@ -12,9 +12,9 @@ outputs:
   - {name: report, type: markdown, description: "Inventory, redirect map, canonical/robots plan, monitoring checklist"}
   - {name: envelope, type: json, description: "The before/after dseo audit envelopes"}
 tools:
-  - {id: doddle.tool.v1.cli.dseo, required: false, fallback: manual_review}
+  - {id: doddle.tool.cli.dseo, required: false, fallback: manual_review}
 integrations: []
 nodes:
-  - {id: sample, type: tool, ref: doddle.tool.v1.cli.dseo, needs: [inputs], produces: [envelope]}
-  - {id: narrate, type: agent, ref: technical-auditor, needs: [envelope], produces: [report]}
+  - {id: sample, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [evidence]}
+  - {id: narrate, type: agent, ref: technical-auditor, needs: [sample], produces: [report]}
 on_fail: {retry: 1, fallback: manual_review}

@@ -15,6 +15,6 @@ tools:
 integrations:
   - google-analytics
 nodes:
-  - {id: collect, type: tool, ref: doddle.tool.v1.ga4.getReport, needs: [inputs], produces: [envelope]}
+  - {id: collect, type: tool, ref: doddle.tool.v1.ga4.getReport, needs: [inputs], produces: [evidence]}
   - {id: narrate, type: agent, ref: geo-specialist, needs: [collect], produces: [report]}
 on_fail: {retry: 1, fallback: manual_review}

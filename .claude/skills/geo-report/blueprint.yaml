@@ -11,9 +11,9 @@ outputs:
   - {name: report, type: markdown, description: "Client-ready GEO report"}
   - {name: envelope, type: json, description: "The dseo report envelope (audit + markdown)"}
 tools:
-  - {id: doddle.tool.v1.cli.dseo, required: true, fallback: manual_review}
+  - {id: doddle.tool.cli.dseo, required: true, fallback: manual_review}
 integrations: []
 nodes:
-  - {id: run, type: tool, ref: doddle.tool.v1.cli.dseo, needs: [inputs], produces: [envelope]}
+  - {id: run, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [envelope]}
   - {id: narrate, type: agent, ref: geo-specialist, needs: [run], produces: [report]}
 on_fail: {retry: 1, fallback: manual_review}

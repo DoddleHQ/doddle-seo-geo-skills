@@ -9,11 +9,11 @@ outputs:
   - {name: report, type: markdown, description: "Prioritised technical fixes"}
   - {name: envelope, type: json, description: "The dseo envelope"}
 tools:
-  - {id: doddle.tool.v1.cli.dseo, required: true, fallback: manual_review}
+  - {id: doddle.tool.cli.dseo, required: true, fallback: manual_review}
   - {id: doddle.tool.v1.gsc.query, required: false, fallback: manual_review}
 integrations:
   - google-search-console
 nodes:
-  - {id: scan, type: tool, ref: doddle.tool.v1.cli.dseo, needs: [inputs], produces: [envelope]}
+  - {id: scan, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [envelope]}
   - {id: narrate, type: agent, ref: technical-auditor, needs: [scan], produces: [report]}
 on_fail: {retry: 1, fallback: manual_review}

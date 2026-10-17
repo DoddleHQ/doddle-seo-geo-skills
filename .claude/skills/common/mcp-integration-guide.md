@@ -1,14 +1,14 @@
 # MCP Integration Guide & Tool Registry
 
 Skills may reference external data only through tool IDs on this registry. **Never invent a
-tool ID.** The toolkit CLI (`doddle.tool.v1.cli.dseo`) covers everything deterministic; MCP tools
+tool ID.** The toolkit CLI (`doddle.tool.cli.dseo`) covers everything deterministic; MCP tools
 cover live, property-specific data.
 
 ## Registry
 
 | Tool ID | Provides | Typical skills | Required |
 |---------|----------|----------------|----------|
-| `doddle.tool.v1.cli.dseo` | Deterministic citability/technical/schema/robots/llms.txt evidence | geo-*, seo-audit, seo-technical | yes (bundled) |
+| `doddle.tool.cli.dseo` | Deterministic citability/technical/schema/robots/llms.txt evidence | geo-*, seo-audit, seo-technical | yes (bundled) |
 | `doddle.tool.v1.gsc.query` | Search Console performance: queries, pages, CTR, position, indexation | seo-reporting, seo-audit, seo-onpage | no |
 | `doddle.tool.v1.ga4.getReport` | Analytics: sessions, conversions, AI-referral traffic | geo-monitor, seo-reporting, analytics | no |
 | `doddle.tool.v1.semrush.domain` | Keyword volume/difficulty, domain overview | seo-keyword-research, seo-competitor | no |
