@@ -19,7 +19,7 @@ BLUEPRINT_REQUIRED = ("id", "kind", "engine")
 
 # Tool IDs the blueprints are allowed to reference.
 TOOL_REGISTRY = {
-    "doddle.tool.cli.dseo",
+    "doddle.tool.v1.cli.dseo",
     "doddle.tool.v1.ga4.getReport",
     "doddle.tool.v1.gsc.query",
     "doddle.tool.v1.hubspot.contacts",

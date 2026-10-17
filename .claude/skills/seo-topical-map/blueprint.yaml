@@ -12,7 +12,7 @@ outputs:
   - {name: report, type: markdown, description: "Clusters, hub-spoke architecture, gaps, cannibalisation flags"}
   - {name: plan, type: json, description: "Cluster/hub/spoke graph with per-node action and assumptions"}
 tools:
-  - {id: doddle.tool.cli.dseo, required: false, fallback: manual_review}
+  - {id: doddle.tool.v1.cli.dseo, required: false, fallback: manual_review}
   - {id: doddle.tool.v1.semrush.domain, required: false, fallback: manual_review}
   - {id: doddle.tool.v1.dataforseo.serp, required: false, fallback: manual_review}
 integrations: []

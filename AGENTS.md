@@ -79,18 +79,18 @@ inputs:
 outputs:
   - {name: report, type: markdown, description: "..."}
 tools:
-  - {id: doddle.tool.cli.dseo, required: false, fallback: manual_review}
+  - {id: doddle.tool.v1.cli.dseo, required: false, fallback: manual_review}
   - {id: doddle.tool.v1.<mcp>.<method>, required: false, fallback: manual_review}
 integrations:
   - <integration>
 nodes:
-  - {id: run, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [evidence]}
+  - {id: run, type: tool, ref: doddle.tool.v1.cli.dseo, needs: [inputs], produces: [evidence]}
   - {id: narrate, type: agent, ref: <agent>, needs: [run], produces: [report]}
 on_fail: {retry: 1, fallback: manual_review}
 ```
 
 Only reference MCP tool IDs from the registry in `common/mcp-integration-guide.md`.
-Never invent a tool ID. Prefer `doddle.tool.cli.dseo` for anything the toolkit can compute.
+Never invent a tool ID. Prefer `doddle.tool.v1.cli.dseo` for anything the toolkit can compute.
 
 ---
 

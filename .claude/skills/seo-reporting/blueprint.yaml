@@ -20,5 +20,5 @@ integrations:
 nodes:
   - {id: gsc, type: tool, ref: doddle.tool.v1.gsc.query, needs: [inputs], produces: [gsc]}
   - {id: ga4, type: tool, ref: doddle.tool.v1.ga4.getReport, needs: [inputs], produces: [ga4]}
-  - {id: narrate, type: agent, ref: seo-strategist, needs: [gsc, ga4], produces: [report]}
+  - {id: narrate, type: agent, ref: seo-strategist, needs: [gsc, ga4], produces: [report, envelope]}
 on_fail: {retry: 1, fallback: manual_review}
