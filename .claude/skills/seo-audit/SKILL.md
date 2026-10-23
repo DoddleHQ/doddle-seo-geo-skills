@@ -1,7 +1,7 @@
 ---
 name: seo-audit
 id: doddle.seo.seo-audit
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a full SEO audit of a site: technical health, indexability, on-page basics, structured data, and priorities. Also use when the user mentions 'SEO audit', 'why is my traffic down', 'site health', 'technical SEO check', 'indexation issues', or gives a URL and asks how it performs in Google/Bing organic search."
 ---

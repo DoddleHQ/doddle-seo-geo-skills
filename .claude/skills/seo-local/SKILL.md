@@ -1,7 +1,7 @@
 ---
 name: seo-local
 id: doddle.seo.seo-local
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to improve local search visibility: Google Business Profile, NAP consistency, LocalBusiness structured data, service-area pages, and reviews. Also use when the user mentions 'local SEO', 'Google Business Profile', 'Google Maps ranking', 'local pack', 'NAP', 'service area', 'near me', or 'multi-location SEO'."
 ---

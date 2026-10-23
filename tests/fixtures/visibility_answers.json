@@ -1,0 +1,21 @@
+{
+  "brand": "Acme CRM",
+  "site": "acme-crm.example",
+  "competitors": ["rivalcrm.example"],
+  "observations": [
+    {"prompt": "best crm for small business", "engine": "chatgpt", "topic": "crm-software", "collected_at": "2026-10-15T10:00:00Z", "brand_mentioned": true, "own_site_cited": true, "citations": ["https://acme-crm.example/blog/guide", "https://www.reddit.com/r/crm"]},
+    {"prompt": "crm software comparison", "engine": "chatgpt", "topic": "crm-software", "collected_at": "2026-10-15T11:00:00Z", "brand_mentioned": true, "own_site_cited": false, "competitors_mentioned": ["rivalcrm.example"], "citations": ["https://bestcrmsite.example/best-crm-2026"]},
+    {"prompt": "crm pricing", "engine": "chatgpt", "topic": "crm-software", "collected_at": "2026-10-15T12:00:00Z", "brand_mentioned": false, "own_site_cited": false, "competitors_mentioned": ["rivalcrm.example"], "citations": ["https://rivalcrm.example/pricing"]},
+    {"prompt": "crm for startups", "engine": "chatgpt", "collected_at": "2026-10-15T13:00:00Z", "brand_mentioned": true, "own_site_cited": false, "citations": []},
+    {"prompt": "sales crm tools", "engine": "chatgpt", "collected_at": "2026-10-15T14:00:00Z", "citations": ["https://news.example/crm-roundup-2026"]},
+    {"prompt": "crm software", "engine": "chatgpt", "topic": "crm-software", "collected_at": "2026-10-15T15:00:00Z", "brand_mentioned": false, "own_site_cited": false},
+    {"prompt": "hubspot vs acme", "engine": "perplexity", "collected_at": "2026-10-16T10:00:00Z", "brand_mentioned": true, "own_site_cited": true, "citations": ["https://acme-crm.example/pricing"]},
+    {"prompt": "crm alternatives", "engine": "perplexity", "collected_at": "2026-10-16T11:00:00Z", "brand_mentioned": true, "own_site_cited": false, "citations": []},
+    {"prompt": "what is a crm", "engine": "perplexity", "collected_at": "2026-10-16T12:00:00Z", "brand_mentioned": false, "own_site_cited": false, "citations": []},
+    {"prompt": "crm tutorials", "engine": "perplexity", "collected_at": "2026-10-16T13:00:00Z", "status": "no_answer"},
+    {"prompt": "crm reviews", "engine": "gemini", "collected_at": "2026-10-17T10:00:00Z", "brand_mentioned": false, "own_site_cited": false, "competitors_mentioned": ["rivalcrm.example"], "citations": []},
+    {"prompt": "crm security", "engine": "gemini", "collected_at": "2026-10-17T11:00:00Z", "brand_mentioned": false, "own_site_cited": false, "citations": []},
+    {"prompt": "crm migration", "engine": "gemini", "collected_at": "2026-10-17T12:00:00Z", "status": "error"},
+    {"prompt": "acme crm", "engine": "gemini", "collected_at": "2026-10-17T13:00:00Z", "brand_mentioned": true, "own_site_cited": true, "citations": ["https://acme-crm.example/compare"]}
+  ]
+}

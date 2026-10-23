@@ -1,7 +1,7 @@
 ---
 name: geo-platform
 id: doddle.seo.geo-platform
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants their content optimised for a specific AI engine — ChatGPT, Perplexity, Google AI Overviews, Bing Copilot, Claude or Gemini — or asks which engine to focus on. Also use when the user mentions 'ChatGPT search', 'Perplexity citations', 'AI Overviews', 'Bing Copilot', 'how do I get cited by Gemini', or 'which AI engine matters most'."
 ---

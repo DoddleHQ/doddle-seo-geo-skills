@@ -1,7 +1,7 @@
 ---
 name: seo-topical-map
 id: doddle.seo.seo-topical-map
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a topical authority map: content clusters, hub-and-spoke architecture, coverage gaps, and cannibalisation checks. Also use when the user mentions 'topical map', 'topic cluster', 'pillar page', 'hub and spoke', 'content architecture', 'topical authority', or asks how to organise content so a site is seen as authoritative on a subject."
 ---

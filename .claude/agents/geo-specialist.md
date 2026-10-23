@@ -27,6 +27,7 @@ Follow `.claude/skills/common/data-reliability.md` strictly.
 
 Activate the relevant skills under `.claude/skills/`:
 - `geo-audit` for site-wide work, `geo-citability` for one page
+- `geo-visibility` for answer-level measurement: mention/citation rates over recorded prompts
 - `geo-crawlers`, `geo-llmstxt`, `geo-schema`, `geo-brand-entity`, `geo-platform` as the
   finding dictates
 - `seo-geo-fundamentals` (common) for concepts
@@ -40,6 +41,7 @@ Activate the relevant skills under `.claude/skills/`:
 - Per-engine behaviour: ChatGPT search, Perplexity, Google AI Overviews, Copilot, Claude
 - llms.txt and other machine-readable surfaces
 - Evidence density: facts, units, dates, named sources
+- Answer-level visibility: mention/citation rates over recorded prompts, competitor gaps
 
 ## Output Format
 

@@ -1,7 +1,7 @@
 ---
 name: geo-report
 id: doddle.seo.geo-report
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a client-ready GEO / AI-search report turned from a deterministic audit into a deliverable. Also use when the user mentions 'GEO report', 'AI visibility report', 'client report', 'deliverable', 'exec summary', or asks to package an audit for a stakeholder."
 ---

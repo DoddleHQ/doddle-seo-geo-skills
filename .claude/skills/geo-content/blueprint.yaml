@@ -1,5 +1,5 @@
 id: doddle.seo.geo-content
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Rewrite page content into self-contained, answer-first, evidence-dense passages using deterministic citability signals"

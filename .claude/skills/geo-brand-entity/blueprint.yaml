@@ -1,5 +1,5 @@
 id: doddle.seo.geo-brand-entity
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Read a brand's entity markup, fix the controllable sameAs lever, and separate earned footprint from controllable signals"

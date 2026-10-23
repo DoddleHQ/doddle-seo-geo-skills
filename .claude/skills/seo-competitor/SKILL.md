@@ -1,7 +1,7 @@
 ---
 name: seo-competitor
 id: doddle.seo.seo-competitor
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a competitor SEO analysis or comparison pages: keyword-gap analysis, the queries rivals rank for that you do not, and building 'vs' or 'alternatives' pages. Also use when the user mentions 'competitor analysis', 'keyword gap', 'vs page', 'alternative to', 'competitor rankings', or 'who outranks us'."
 ---

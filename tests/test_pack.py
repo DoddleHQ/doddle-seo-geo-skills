@@ -13,11 +13,12 @@ import lint_pack  # noqa: E402
 
 EXPECTED = {
     "geo-audit", "geo-citability", "geo-crawlers", "geo-llmstxt", "geo-schema", "geo-report",
-    "geo-brand-entity", "geo-platform", "geo-monitor", "geo-content",
+    "geo-brand-entity", "geo-platform", "geo-monitor", "geo-content", "geo-visibility",
     "seo-audit", "seo-technical", "seo-onpage", "seo-schema", "seo-internal-linking",
     "seo-hreflang", "seo-keyword-research", "seo-topical-map", "seo-content-brief",
     "seo-competitor", "seo-backlinks", "seo-digital-pr", "seo-local", "seo-ecommerce",
     "seo-strategy", "seo-reporting", "seo-sxo", "seo-programmatic", "seo-migration",
+    "seo-keyword-clustering",
     "seo-geo-fundamentals",
 }
 REQUIRED_SECTIONS = ("## Response Contract", "## Related Skills", "## Inputs", "## Outputs")

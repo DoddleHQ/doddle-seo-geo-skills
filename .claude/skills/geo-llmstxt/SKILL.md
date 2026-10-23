@@ -1,7 +1,7 @@
 ---
 name: geo-llmstxt
 id: doddle.seo.geo-llmstxt
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to validate or draft an llms.txt file so AI engines can find a site's key pages. Also use when the user mentions 'llms.txt', 'llms.txt file', 'llmstxt', 'AI sitemap', 'AI-readable site map', or asks for a machine-readable index for ChatGPT, Claude or Perplexity."
 ---

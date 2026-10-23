@@ -1,7 +1,7 @@
 ---
 name: seo-keyword-research
 id: doddle.seo.seo-keyword-research
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants keyword research: seed ideas, search volume, difficulty, intent, and clustering into a URL plan of pages to create, optimise, or consolidate. Also use when the user mentions 'keyword research', 'search volume', 'keyword difficulty', 'search intent', 'keyword clustering', or asks what to write and which page should target a term."
 ---

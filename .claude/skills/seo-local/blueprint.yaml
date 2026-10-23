@@ -1,5 +1,5 @@
 id: doddle.seo.seo-local
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Improve local search: LocalBusiness markup plus a GBP, NAP, service-area and reviews plan"

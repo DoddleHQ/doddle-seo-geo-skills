@@ -1,7 +1,7 @@
 ---
 name: geo-brand-entity
 id: doddle.seo.geo-brand-entity
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants their brand recognised as a real entity by AI engines, or asks why ChatGPT, Perplexity, Gemini or Copilot does not seem to know their company. Also use when the user mentions 'brand entity', 'entity authority', 'sameAs', 'knowledge graph', 'Wikidata', 'brand not recognised by AI', or 'how do I get my company into AI answers'."
 ---

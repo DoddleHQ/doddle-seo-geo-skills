@@ -1,7 +1,7 @@
 ---
 name: seo-digital-pr
 id: doddle.seo.seo-digital-pr
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to earn links and coverage through digital PR: linkable-asset ideas, outreach, journalist and HARO-style pitching, and what actually makes coverage earn links. Also use when the user mentions 'digital PR', 'earned links', 'link building outreach', 'HARO', 'press outreach', 'linkable assets', or 'get press coverage'."
 ---

@@ -1,7 +1,7 @@
 ---
 name: seo-reporting
 id: doddle.seo.seo-reporting
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants an SEO performance report or forecast: organic clicks, impressions, CTR, average position and conversions, current vs previous period. Also use when the user mentions 'SEO report', 'Search Console data', 'traffic report', 'clicks and impressions', 'CTR', 'ranking changes', 'winners and losers', 'striking distance', 'keyword cannibalisation', or 'forecast organic traffic'."
 ---

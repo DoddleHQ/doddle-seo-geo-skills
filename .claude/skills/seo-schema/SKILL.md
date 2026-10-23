@@ -1,7 +1,7 @@
 ---
 name: seo-schema
 id: doddle.seo.seo-schema
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to earn rich results with structured data: Article, Product and Offer, FAQPage, HowTo, BreadcrumbList, and Review markup, plus validity fixes. Also use when the user mentions 'schema markup', 'structured data', 'JSON-LD', 'rich results', 'rich snippets', 'FAQ schema', 'product schema', or 'breadcrumb schema'."
 ---

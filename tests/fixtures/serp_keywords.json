@@ -1,0 +1,12 @@
+{
+  "keywords": [
+    {"keyword": "crm software", "results": ["https://a.example/p1", "https://b.example/p2", "https://c.example", "https://d.example"], "intent": "commercial", "volume": 900},
+    {"keyword": "best crm software", "results": ["https://b.example/p2", "https://c.example", "https://d.example", "https://e.example"], "intent": "commercial", "volume": 320},
+    {"keyword": "crm software for small business", "results": ["https://c.example", "https://d.example", "https://f.example"], "intent": "informational", "volume": 140},
+    {"keyword": "crm pricing", "results": ["https://x.example", "https://y.example", "https://z.example"], "intent": "commercial", "volume": 480},
+    {"keyword": "crm cost", "results": ["https://x.example", "https://y.example", "https://w.example"], "intent": "commercial", "volume": 210},
+    {"keyword": "sales pipeline template", "results": ["https://m.example", "https://n.example"], "intent": "informational", "volume": 90},
+    {"keyword": "crm certification", "results": ["https://p.example", "https://q.example"], "intent": "informational"},
+    {"keyword": "what is crm", "results": []}
+  ]
+}

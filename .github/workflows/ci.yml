@@ -28,3 +28,6 @@ jobs:
           python scripts/dseo version
           python scripts/dseo score tests/fixtures/site/index.html --json > /dev/null
           python scripts/dseo robots tests/fixtures/site/robots.txt --json > /dev/null
+          python scripts/dseo visibility tests/fixtures/visibility_answers.json --json > /dev/null
+          python scripts/dseo cluster tests/fixtures/serp_keywords.json --json > /dev/null
+          python scripts/dseo cannibalize tests/fixtures/gsc_rows.json --json > /dev/null

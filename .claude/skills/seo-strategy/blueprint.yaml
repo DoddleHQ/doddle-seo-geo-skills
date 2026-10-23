@@ -1,5 +1,5 @@
 id: doddle.seo.seo-strategy
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Prioritised, dependency-ordered SEO roadmap scored by impact x confidence / effort"

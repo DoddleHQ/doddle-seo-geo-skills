@@ -1,5 +1,5 @@
 id: doddle.seo.seo-hreflang
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Audit international SEO and hreflang: x-default, self-references, return tags, canonicals"

@@ -1,7 +1,7 @@
 ---
 name: geo-audit
 id: doddle.seo.geo-audit
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a full GEO / AI-search audit of a site: crawl it, score citability, technical and schema across every page, and rank the fixes by what each recovers. Also use when the user mentions 'GEO audit', 'AI visibility audit', 'why doesn't ChatGPT cite us', 'Perplexity visibility', 'AI Overviews score', or gives a URL and asks how it performs in AI search."
 ---

@@ -1,7 +1,7 @@
 ---
 name: seo-backlinks
 id: doddle.seo.seo-backlinks
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to analyse a backlink profile or plan link building: referring domains, anchor diversity, profile health, and prospecting. Also use when the user mentions 'backlinks', 'link building', 'referring domains', 'anchor text', 'link profile', 'toxic links', 'DR', 'DA', or 'how do I get more links'."
 ---

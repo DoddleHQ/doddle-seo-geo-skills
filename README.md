@@ -1,6 +1,6 @@
 # Doddle SEO & GEO OS
 
-> A DoddleOS peer pack: **30 skills + 5 agents** for technical/organic SEO and Generative
+> A DoddleOS peer pack: **32 skills + 5 agents** for technical/organic SEO and Generative
 > Engine Optimization, backed by a **deterministic, zero-dependency toolkit**.
 
 **The one claim:** every number in a report is reproducible from recorded evidence. The
@@ -59,6 +59,9 @@ python3 scripts/dseo version
 | `dseo robots <url\|file>` | Per-AI-crawler allow/block, search vs training, sitemaps |
 | `dseo llmstxt <url\|file> [--generate]` | Analyze or draft `llms.txt` |
 | `dseo report <url> [--out FILE]` | Audit + markdown report |
+| `dseo visibility <file> [--brand --site --competitors]` | Mention/citation rates from recorded AI answers, competitor gaps, per-engine breakdown |
+| `dseo cluster <file> [--threshold 0.4]` | SERP-overlap keyword clusters with mixed-intent flags |
+| `dseo cannibalize <file>` | GSC queries split across pages, impressions at risk, contested splits |
 | `dseo doctor` | Environment check |
 
 Output is JSON when piped (`--json` is belt-and-braces). Every envelope carries
@@ -68,18 +71,18 @@ ranked `findings[]`, and `completeness`. See
 
 ---
 
-## Skills (30)
+## Skills (32)
 
-### GEO / AI search (10)
+### GEO / AI search (11)
 `geo-audit`, `geo-citability`, `geo-crawlers`, `geo-llmstxt`, `geo-schema`, `geo-report`,
-`geo-brand-entity`, `geo-platform`, `geo-monitor`, `geo-content`
+`geo-brand-entity`, `geo-platform`, `geo-monitor`, `geo-content`, `geo-visibility`
 
-### SEO (20)
+### SEO (21)
 `seo-audit`, `seo-technical`, `seo-onpage`, `seo-schema`, `seo-internal-linking`,
 `seo-hreflang`, `seo-keyword-research`, `seo-topical-map`, `seo-content-brief`,
 `seo-competitor`, `seo-backlinks`, `seo-digital-pr`, `seo-local`, `seo-ecommerce`,
 `seo-strategy`, `seo-reporting`, `seo-sxo`, `seo-programmatic`, `seo-migration`,
-`seo-geo-fundamentals`
+`seo-keyword-clustering`, `seo-geo-fundamentals`
 
 Full inventory with owners and agents: [`skills-matrix.md`](skills-matrix.md).
 

@@ -1,7 +1,7 @@
 {
   "name": "doddle-seo-geo-skills",
-  "version": "0.1.0",
-  "description": "Doddle SEO & GEO OS — 30 skills for technical/organic SEO and Generative Engine Optimization, with a deterministic zero-dependency evidence toolkit.",
+  "version": "0.2.0",
+  "description": "Doddle SEO & GEO OS — 32 skills for technical/organic SEO and Generative Engine Optimization, with a deterministic zero-dependency evidence toolkit.",
   "main": "README.md",
   "scripts": {
     "test": "python3 -m pytest tests -q",

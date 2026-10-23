@@ -1,5 +1,5 @@
 id: doddle.seo.seo-internal-linking
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Design hub-and-spoke internal linking and fix orphans, depth and anchors from crawl structure"

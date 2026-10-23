@@ -1,7 +1,7 @@
 ---
 name: seo-programmatic
 id: doddle.seo.seo-programmatic
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to build programmatic SEO pages at scale from a template and a dataset, or to audit pages already generated that way. Also use when the user mentions 'programmatic SEO', 'pages at scale', 'template pages', 'pSEO', 'generate thousands of pages', 'thin content', 'index bloat', 'duplicate pages', or 'scale content'."
 ---

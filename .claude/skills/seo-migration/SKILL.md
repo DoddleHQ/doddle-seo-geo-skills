@@ -1,7 +1,7 @@
 ---
 name: seo-migration
 id: doddle.seo.seo-migration
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user is moving a site — changing domain, replatforming, restructuring URLs, or redesigning — and wants to protect organic search. Also use when the user mentions 'site migration', 'domain migration', 'replatform', 'redesign', 'redirect map', '301 mapping', 'URL changes', 'migration checklist', or 'traffic dropped after relaunch'."
 ---

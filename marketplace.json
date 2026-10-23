@@ -6,15 +6,15 @@
     "url": "https://doddlehq.com"
   },
   "metadata": {
-    "description": "Doddle SEO & GEO OS — 30 independent skills for technical/organic SEO and Generative Engine Optimization, backed by a deterministic evidence toolkit",
-    "version": "0.1.0",
-    "updatedAt": "2026-10-17"
+    "description": "Doddle SEO & GEO OS — 32 independent skills for technical/organic SEO and Generative Engine Optimization, backed by a deterministic evidence toolkit",
+    "version": "0.2.0",
+    "updatedAt": "2026-10-24"
   },
   "plugins": [
     {
       "name": "doddle-seo-geo-skills",
       "source": "./",
-      "description": "Doddle SEO & GEO OS: 30 skills (GEO + technical SEO + content + authority) with a deterministic CLI. Skills narrate; the toolkit computes every number from recorded evidence.",
+      "description": "Doddle SEO & GEO OS: 32 skills (GEO + technical SEO + content + authority) with a deterministic CLI. Skills narrate; the toolkit computes every number from recorded evidence.",
       "author": {
         "name": "Doddle Team"
       },

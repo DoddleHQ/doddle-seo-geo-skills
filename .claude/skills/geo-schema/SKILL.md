@@ -1,7 +1,7 @@
 ---
 name: geo-schema
 id: doddle.seo.geo-schema
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants AI engines to understand a site's entities and authorship through structured data: Organization identity, stable @id, sameAs, knowsAbout, and Author. Also use when the user mentions 'entity schema', 'sameAs', 'knowsAbout', 'Organization schema for AI', 'stable @id', or 'AI structured data'."
 ---

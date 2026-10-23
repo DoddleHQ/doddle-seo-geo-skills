@@ -23,7 +23,7 @@ Follow `.claude/skills/common/data-reliability.md` strictly.
 
 ## Skill Integration
 
-- `seo-keyword-research`, `seo-topical-map`, `seo-content-brief`, `seo-strategy`
+- `seo-keyword-research`, `seo-keyword-clustering`, `seo-topical-map`, `seo-content-brief`, `seo-strategy`
 - `seo-competitor` for gaps, `seo-reporting` for proof
 
 ## Your Expertise

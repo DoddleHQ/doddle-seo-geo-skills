@@ -1,7 +1,7 @@
 ---
 name: seo-sxo
 id: doddle.seo.seo-sxo
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants search experience optimisation: winning SERP features (featured snippets, People Also Ask, AI Overviews, sitelinks) and improving click-through rate from the results page. Also use when the user mentions 'SERP features', 'featured snippet', 'People Also Ask', 'AI Overviews', 'sitelinks', 'zero-click', 'CTR', 'title tag for clicks', or 'rich result'."
 ---

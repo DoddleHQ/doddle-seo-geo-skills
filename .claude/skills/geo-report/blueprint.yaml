@@ -1,5 +1,5 @@
 id: doddle.seo.geo-report
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Render a deterministic GEO audit as a client-ready markdown deliverable without adding new numbers"

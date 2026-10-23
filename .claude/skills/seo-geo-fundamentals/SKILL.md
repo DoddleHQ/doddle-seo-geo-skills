@@ -1,7 +1,7 @@
 ---
 name: seo-geo-fundamentals
 id: doddle.seo.seo-geo-fundamentals
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to orient themselves in SEO or GEO: how the two disciplines differ, which one a problem belongs to, or which skill to use next. Also use when the user mentions 'SEO vs GEO', 'difference between SEO and GEO', 'AEO', 'LLM SEO', 'AI search vs Google', 'where do I start', 'which SEO skill', or asks for a map of the skill family."
 ---

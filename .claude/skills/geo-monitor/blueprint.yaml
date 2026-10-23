@@ -1,5 +1,5 @@
 id: doddle.seo.geo-monitor
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Monitor AI visibility with GA4 AI-referral sessions and landing pages, with prompt sampling kept advisory-only"

@@ -13,6 +13,9 @@ Commands::
     dseo robots  <url|file>   [--json]
     dseo llmstxt <url|file>   [--json] [--generate]
     dseo report  <url>        [--json]
+    dseo visibility <file>    [--json] [--brand B] [--site S] [--competitors a,b]
+    dseo cluster  <file>      [--json] [--threshold 0.4]
+    dseo cannibalize <file>   [--json]
     dseo doctor
 """
 
@@ -30,11 +33,13 @@ from . import llmstxt as llmstxt_mod
 from . import robots as robots_mod
 from . import schema as schema_mod
 from .audit import audit_site
+from .clustering import cluster_envelope, cannibalize_envelope
 from .envelope import CURRENT, make_envelope, tier_for, utc_now
 from .fetch import fetch
 from .htmlparse import parse
 from .report import render_markdown
 from .scoring import analyze_page, score_to_envelope
+from .visibility import visibility_envelope
 
 
 def _emit(obj: Any, as_json: bool) -> None:
@@ -59,6 +64,13 @@ def _human(obj: Dict[str, Any]) -> str:
     if obj.get("error"):
         e = obj["error"]
         return f"ERROR: {e.get('message')}\n  hint: {e.get('hint')}"
+    if obj.get("summary"):
+        lines = [obj["summary"]]
+        for n in (obj.get("visibility") or {}).get("warnings", []):
+            lines.append(f"  warning: {n}")
+        for n in (obj.get("cannibalize") or {}).get("warnings", []):
+            lines.append(f"  warning: {n}")
+        return "\n".join(lines)
     return json.dumps(obj, indent=2, ensure_ascii=False)
 
 
@@ -256,6 +268,27 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0 if env["ok"] else 1
 
 
+def cmd_visibility(args: argparse.Namespace) -> int:
+    competitors = None
+    if args.competitors:
+        competitors = [c.strip() for c in args.competitors.split(",") if c.strip()]
+    env = visibility_envelope(args.target, brand=args.brand, site=args.site, competitors=competitors)
+    _emit(env, _wants_json(args))
+    return 0 if env["ok"] else 1
+
+
+def cmd_cluster(args: argparse.Namespace) -> int:
+    env = cluster_envelope(args.target, threshold=args.threshold)
+    _emit(env, _wants_json(args))
+    return 0 if env["ok"] else 1
+
+
+def cmd_cannibalize(args: argparse.Namespace) -> int:
+    env = cannibalize_envelope(args.target)
+    _emit(env, _wants_json(args))
+    return 0 if env["ok"] else 1
+
+
 def cmd_doctor(args: argparse.Namespace) -> int:
     checks = [
         {"name": "python", "ok": sys.version_info >= (3, 9), "detail": sys.version.split()[0]},
@@ -312,6 +345,22 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--rate", type=float, default=1.0)
     sp.add_argument("--out", help="write the markdown report to this path")
     sp.set_defaults(func=cmd_report)
+
+    sp = sub.add_parser("visibility", parents=[common],
+                        help="AI-answer visibility from a recorded prompt/answer set")
+    sp.add_argument("--brand", help="brand name (overrides the file's brand field)")
+    sp.add_argument("--site", help="own site/domain for citation classification")
+    sp.add_argument("--competitors", help="comma-separated competitor domains")
+    sp.set_defaults(func=cmd_visibility)
+
+    sp = sub.add_parser("cluster", parents=[common], help="SERP-overlap keyword clusters")
+    sp.add_argument("--threshold", type=float, default=0.4,
+                    help="minimum containment overlap to join (0-1), default 0.4")
+    sp.set_defaults(func=cmd_cluster)
+
+    sp = sub.add_parser("cannibalize", parents=[common],
+                        help="cannibalising queries from a GSC export (CSV or JSON)")
+    sp.set_defaults(func=cmd_cannibalize)
 
     sp = sub.add_parser("doctor", help="check the environment")
     sp.add_argument("--json", action="store_true")

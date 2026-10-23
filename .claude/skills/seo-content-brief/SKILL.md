@@ -1,7 +1,7 @@
 ---
 name: seo-content-brief
 id: doddle.seo.seo-content-brief
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a content brief for a page: target intent, outline, entities to cover, questions to answer, internal links, schema, and a success metric. Also use when the user mentions 'content brief', 'article outline', 'what should this page cover', 'PAA questions', 'entities to cover', 'writer brief', or 'brief this keyword'."
 ---

@@ -1,5 +1,5 @@
 id: doddle.seo.seo-migration
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Plan and run a site migration: inventory, 1:1 redirect map, canonical/robots changes, monitoring"

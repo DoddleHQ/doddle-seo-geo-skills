@@ -1,5 +1,5 @@
 id: doddle.seo.seo-sxo
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Win SERP features and improve CTR: snippet-ready structure plus live SERP feature evidence"

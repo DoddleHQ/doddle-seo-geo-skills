@@ -1,0 +1,19 @@
+id: doddle.seo.geo-visibility
+version: 0.2.0
+kind: skill
+engine: doddle-os>=1.0
+description: "Measure AI-answer visibility from a recorded prompt/answer set: mention and citation rates with honest denominators, competitor gaps, per-engine breakdown"
+inputs:
+  - {name: answers_file, type: string, required: true, description: "Recorded prompt/answer JSON file"}
+  - {name: brand, type: string, required: false, description: "Brand name (overrides the file's brand field)"}
+  - {name: site, type: string, required: false, description: "Own domain for citation classification"}
+  - {name: competitors, type: list, required: false, description: "Competitor domains for gaps and source classes"}
+outputs:
+  - {name: report, type: markdown, description: "Mention/citation rates, competitor gaps, per-engine breakdown, warnings first"}
+  - {name: envelope, type: json, description: "The dseo visibility envelope"}
+tools:
+  - {id: doddle.tool.cli.dseo, required: true, fallback: manual_review}
+nodes:
+  - {id: run, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [envelope]}
+  - {id: narrate, type: agent, ref: geo-specialist, needs: [run], produces: [report]}
+on_fail: {retry: 1, fallback: manual_review}

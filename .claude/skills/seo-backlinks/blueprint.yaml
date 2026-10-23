@@ -1,5 +1,5 @@
 id: doddle.seo.seo-backlinks
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Analyse a backlink profile and plan link building from live data plus deterministic on-site context"

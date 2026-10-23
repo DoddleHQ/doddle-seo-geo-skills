@@ -137,6 +137,11 @@ def make_envelope(
 
 
 def error_envelope(command: str, target: str, message: str, hint: str, **kw: Any) -> Dict[str, Any]:
+    from . import DATA_VERSION, SCORING_VERSION, TOOLKIT_VERSION  # deferred: avoid import cycle
+
+    kw.setdefault("toolkit_version", TOOLKIT_VERSION)
+    kw.setdefault("scoring_version", SCORING_VERSION)
+    kw.setdefault("data_version", DATA_VERSION)
     return make_envelope(
         command,
         target,

@@ -1,10 +1,10 @@
 # Skills Matrix
 
-30 skills, 5 agents. Every skill is `<name>` at `.claude/skills/<name>/` with `SKILL.md` +
+32 skills, 5 agents. Every skill is `<name>` at `.claude/skills/<name>/` with `SKILL.md` +
 `blueprint.yaml`; `id: doddle.seo.<name>`. "Toolkit" lists the `dseo` commands the skill runs;
 "advisory" means no deterministic script and the skill states its inputs.
 
-## GEO / AI search (10)
+## GEO / AI search (11)
 
 | Skill | Toolkit / basis | Agent | Purpose |
 |-------|-----------------|-------|---------|
@@ -18,8 +18,9 @@
 | `geo-platform` | `dseo score` + `dseo robots` | geo-specialist | Per-engine optimisation (ChatGPT, Perplexity, AIO, Copilot, Claude, Gemini) |
 | `geo-monitor` | live `ga4.getReport` + advisory sampling | geo-specialist | AI-referral traffic and cited pages |
 | `geo-content` | `dseo citability` + editorial | geo-specialist | Rewrite for quotability |
+| `geo-visibility` | `dseo visibility` | geo-specialist | Answer-level AI visibility: mention/citation rates, competitor gaps |
 
-## SEO (20)
+## SEO (21)
 
 | Skill | Toolkit / basis | Agent | Purpose |
 |-------|-----------------|-------|---------|
@@ -30,6 +31,7 @@
 | `seo-internal-linking` | `dseo audit` + advisory | technical-auditor | Hub-spoke architecture, anchors, orphans |
 | `seo-hreflang` | `dseo technical` + advisory | technical-auditor | International / hreflang |
 | `seo-keyword-research` | live `semrush.domain`, `dataforseo.serp` | seo-strategist | Intent, clustering, URL decisions |
+| `seo-keyword-clustering` | `dseo cluster`, `dseo cannibalize` + live `dataforseo.serp`/`gsc.query` | seo-strategist | SERP-overlap clusters and cannibalising queries |
 | `seo-topical-map` | advisory | seo-strategist | Clusters and topical authority |
 | `seo-content-brief` | advisory + live SERP | seo-strategist | Ready-to-write briefs |
 | `seo-competitor` | `dseo audit` + live tools | seo-strategist | Gap analysis and comparison pages |

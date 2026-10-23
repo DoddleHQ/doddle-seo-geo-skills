@@ -1,7 +1,7 @@
 ---
 name: seo-ecommerce
 id: doddle.seo.seo-ecommerce
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to improve e-commerce SEO: Product and Offer structured data, category versus product-page intent, faceted navigation and pagination, product variants, and thin or duplicate descriptions. Also use when the user mentions 'ecommerce SEO', 'product page SEO', 'category page', 'faceted navigation', 'product schema', 'out of stock', 'pagination', or 'product variants'."
 ---

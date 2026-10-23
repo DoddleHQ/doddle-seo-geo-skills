@@ -1,0 +1,12 @@
+{
+  "rows": [
+    {"query": "crm software", "page": "https://acme-crm.example/crm", "clicks": 40, "impressions": 800, "position": 6.2},
+    {"query": "crm software", "page": "https://acme-crm.example/crm-software", "clicks": 10, "impressions": 500, "position": 11.4},
+    {"query": "best crm", "page": "https://acme-crm.example/best", "clicks": 8, "impressions": 200, "position": 9.1},
+    {"query": "best crm", "page": "https://acme-crm.example/top-crm", "clicks": 6, "impressions": 180, "position": 10.5},
+    {"query": "best crm", "page": "https://acme-crm.example/compare", "clicks": 2, "impressions": 90, "position": 14.2},
+    {"query": "crm pricing", "page": "https://acme-crm.example/pricing", "clicks": 22, "impressions": 640, "position": 4.8},
+    {"query": "crm reviews", "page": "https://acme-crm.example/reviews", "clicks": 5},
+    {"query": "crm reviews", "page": "https://acme-crm.example/testimonials", "clicks": 2}
+  ]
+}

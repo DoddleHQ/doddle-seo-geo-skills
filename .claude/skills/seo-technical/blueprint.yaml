@@ -1,5 +1,5 @@
 id: doddle.seo.seo-technical
-version: 0.1.0
+version: 0.2.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Fix technical SEO foundations: indexability, canonicalisation, rendering, hygiene"

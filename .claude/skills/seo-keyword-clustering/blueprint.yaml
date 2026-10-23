@@ -1,0 +1,26 @@
+id: doddle.seo.seo-keyword-clustering
+version: 0.2.0
+kind: skill
+engine: doddle-os>=1.0
+description: "Group keywords by recorded SERP-overlap and detect cannibalisation from a GSC export, with URL actions labelled advisory"
+inputs:
+  - {name: serp_file, type: string, required: true, description: "Recorded SERP results JSON (keywords + results rows)"}
+  - {name: gsc_export, type: string, required: false, description: "GSC export (CSV or JSON rows) for cannibalisation"}
+  - {name: threshold, type: float, required: false, description: "Minimum containment overlap to join, default 0.4"}
+  - {name: domain, type: string, required: false, description: "Site the URL decisions apply to"}
+outputs:
+  - {name: clusters, type: json, description: "SERP-overlap clusters with overlap, intents, coverage"}
+  - {name: cannibalisation, type: json, description: "The dseo cannibalize envelope"}
+  - {name: report, type: markdown, description: "Cluster plan and split table with advisory URL actions"}
+tools:
+  - {id: doddle.tool.cli.dseo, required: true, fallback: manual_review}
+  - {id: doddle.tool.v1.dataforseo.serp, required: false, fallback: manual_review}
+  - {id: doddle.tool.v1.gsc.query, required: false, fallback: manual_review}
+integrations:
+  - dataforseo
+  - google-search-console
+nodes:
+  - {id: cluster, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [clusters]}
+  - {id: cannibal, type: tool, ref: doddle.tool.cli.dseo, needs: [inputs], produces: [cannibalisation]}
+  - {id: narrate, type: agent, ref: seo-strategist, needs: [cluster, cannibal], produces: [report]}
+on_fail: {retry: 1, fallback: manual_review}

@@ -1,7 +1,7 @@
 ---
 name: geo-monitor
 id: doddle.seo.geo-monitor
-version: 0.1.0
+version: 0.2.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to monitor AI visibility over time — how much traffic ChatGPT, Perplexity, Gemini, Claude and Copilot send them and which pages those engines cite. Also use when the user mentions 'AI referral traffic', 'AI visibility monitoring', 'are we showing up in ChatGPT', 'Perplexity traffic', 'AI traffic in GA4', or 'track AI search over time'."
 ---
