@@ -1,7 +1,7 @@
 ---
 name: seo-keyword-research
 id: doddle.seo.seo-keyword-research
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants keyword research: seed ideas, search volume, difficulty, intent, and clustering into a URL plan of pages to create, optimise, or consolidate. Also use when the user mentions 'keyword research', 'search volume', 'keyword difficulty', 'search intent', 'keyword clustering', or asks what to write and which page should target a term."
 ---
@@ -47,6 +47,28 @@ user asks how a cluster or intent was decided.
 7. **Report** using the response contract. Name the source of every metric and every metric that
    is missing. If a metric is missing, the source is the user and the decision carries a
    manual-review note.
+
+## Sub-flows
+
+### Striking distance (Search Console first)
+
+Before broad discovery, harvest the cheapest wins from the site's own first-party data.
+Standing definition for this bucket: average position **8–20** with **≥50 impressions** in
+the current window (same position band as `references/reporting-methodology.md` and
+`seo-reporting`; state both numbers whenever you name the bucket).
+
+1. Pull `doddle.tool.v1.gsc.query`: queries grouped by query, filtered to the band above,
+   with clicks, impressions, and average position. If unavailable, print
+   `⚠️ NOT AVAILABLE — configure Search Console` and continue with seeds only — do not
+   reconstruct the list from a third-party tool.
+2. Every returned row is a seed with first-party evidence: proven demand *for this site*
+   (impressions) and proven proximity (position). Push them through the main workflow —
+   hydrate volume/difficulty with the live tools, classify intent, cluster, decide URLs.
+3. Report them as a separate **"striking distance"** section of the plan, ahead of new
+   discovery. Never merge the two buckets: one is evidence-backed quick wins, the other is
+   opportunity hypotheses.
+4. Filtering is the tool's job: pass the criteria, quote the rows it returns, count nothing
+   by hand. Every number in the section is `live` and carries the window it came from.
 
 ## Response Contract
 

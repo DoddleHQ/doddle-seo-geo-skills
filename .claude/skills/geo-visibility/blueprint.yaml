@@ -1,5 +1,5 @@
 id: doddle.seo.geo-visibility
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Measure AI-answer visibility from a recorded prompt/answer set: mention and citation rates with honest denominators, competitor gaps, per-engine breakdown"

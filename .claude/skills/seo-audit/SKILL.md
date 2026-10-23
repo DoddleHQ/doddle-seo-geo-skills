@@ -1,7 +1,7 @@
 ---
 name: seo-audit
 id: doddle.seo.seo-audit
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a full SEO audit of a site: technical health, indexability, on-page basics, structured data, and priorities. Also use when the user mentions 'SEO audit', 'why is my traffic down', 'site health', 'technical SEO check', 'indexation issues', or gives a URL and asks how it performs in Google/Bing organic search."
 ---
@@ -46,7 +46,13 @@ Console`; never estimate.
    alt, length), schema (JSON-LD validity + entity), content (structure, evidence, attribution,
    freshness).
 5. **Prioritise.** Keep the scorer's order; add dependency reasoning and effort estimates.
-6. **State what you could not measure** (live GSC data, backlinks) and name the tool.
+6. **Second-pass review before you write.** Re-read the draft shortlist against the envelope:
+   every recommendation must trace to a `findings[]` or `signals[]` field — delete any that
+   does not — and every finding you chose *not* to emphasise gets a one-line reason. Name the
+   runner-up: the item ranked second, and why it lost. If a second agent is available, hand it
+   the envelope and the draft and ask only one question: *which of these numbers is not in the
+   envelope?* Fix what it finds before anything ships.
+7. **State what you could not measure** (live GSC data, backlinks) and name the tool.
 
 ## Response Contract
 
@@ -80,6 +86,7 @@ Hard rules:
 | Treating JS-gated extractability as a content problem | It is a rendering problem | Flag SSR/prerender |
 | Reporting missing GSC data as "0 traffic" | Invents a number | Mark NOT AVAILABLE |
 | Listing every page in a template bug | Noise | Group by finding, name the template |
+| Shipping the draft without step 6 | Shortlists drift from the envelope under time pressure | Trace every recommendation to a field; name the runner-up |
 
 ## Related Skills
 

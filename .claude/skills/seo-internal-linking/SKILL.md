@@ -1,7 +1,7 @@
 ---
 name: seo-internal-linking
 id: doddle.seo.seo-internal-linking
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to design or fix internal linking: hub-and-spoke architecture, anchor text strategy, orphan pages, and click depth. Also use when the user mentions 'internal links', 'orphan pages', 'hub and spoke', 'link depth', 'topic clusters', 'anchor text', 'crawl depth', or 'internal link structure'."
 ---

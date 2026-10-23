@@ -1,7 +1,7 @@
 ---
 name: geo-audit
 id: doddle.seo.geo-audit
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a full GEO / AI-search audit of a site: crawl it, score citability, technical and schema across every page, and rank the fixes by what each recovers. Also use when the user mentions 'GEO audit', 'AI visibility audit', 'why doesn't ChatGPT cite us', 'Perplexity visibility', 'AI Overviews score', or gives a URL and asks how it performs in AI search."
 ---
@@ -50,7 +50,13 @@ and do not fall back to guessing numbers with WebFetch.
    are dated. Machine-readable authorship is the first job on a publisher and close to last on
    a syntax reference. Work out the kind, state your conclusion so the reader can correct you,
    and let it order the advice — never around a blocker.
-6. **Recommend the next command.** One only: usually `dseo report <url>` or a drill-down
+6. **Second-pass review before you write.** Trace every recommendation back to a `findings[]`
+   or `signals[]` field and drop any that cannot be traced. Give a one-line reason for each
+   finding you chose not to emphasise, and name the runner-up — the fix ranked second — and
+   why it lost. If a second agent is available, hand it the envelope and the draft with one
+   question: *which of these numbers is not in the envelope?* Resolve its findings before the
+   report ships.
+7. **Recommend the next command.** One only: usually `dseo report <url>` or a drill-down
    (`dseo citability <page>`).
 
 ## Response Contract
@@ -86,6 +92,7 @@ Hard rules:
 | Comparing the score to another tool | Different tools measure different things | Report only this score and its methodology |
 | Rewriting content before fixing crawler access | Recovers nothing if the crawler cannot read | Extractability and crawler access first |
 | Fetching pages yourself to "confirm" | A different fetcher is a different measurement | Trust the envelope; use `--json` |
+| Publishing without the step-6 review pass | Priorities drift from the envelope between draft and report | Trace to fields, name the runner-up, run the second-agent question |
 
 ## Related Skills
 

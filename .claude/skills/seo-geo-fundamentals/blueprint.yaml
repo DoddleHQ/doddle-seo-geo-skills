@@ -1,5 +1,5 @@
 id: doddle.seo.seo-geo-fundamentals
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Shared SEO/GEO hub: orient SEO vs GEO and route to the right skill in the family"

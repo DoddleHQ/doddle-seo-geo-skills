@@ -1,5 +1,5 @@
 id: doddle.seo.geo-citability
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Score a single page for AI citability and rank the fixes that recover the most"

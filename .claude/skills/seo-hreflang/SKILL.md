@@ -1,7 +1,7 @@
 ---
 name: seo-hreflang
 id: doddle.seo.seo-hreflang
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to set up or debug international SEO and hreflang: x-default, self-referencing tags, return tags, and canonical consistency across language and region versions. Also use when the user mentions 'hreflang', 'international SEO', 'multilingual site', 'x-default', 'language targeting', 'locale targeting', or 'hreflang errors'."
 ---

@@ -1,7 +1,7 @@
 ---
 name: geo-visibility
 id: doddle.seo.geo-visibility
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to measure what AI engines actually say about them — brand mention rates, citation rates, competitor gaps, and per-engine visibility across a set of recorded prompts. Also use when the user mentions 'AI visibility measurement', 'brand mention rate', 'answer share', 'share of voice in AI', 'are we cited in ChatGPT', 'why does ChatGPT recommend competitors', 'AI visibility vs competitors', or asks how often they appear in AI answers. Unlike geo-audit (site-side), this measures recorded answers."
 ---

@@ -1,5 +1,5 @@
 id: doddle.seo.seo-digital-pr
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Plan digital PR campaigns that earn editorial links: linkable assets, outreach and pitching"

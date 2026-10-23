@@ -1,7 +1,7 @@
 ---
 name: geo-crawlers
 id: doddle.seo.geo-crawlers
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to audit or fix which AI crawlers may access a site, understand search/answer vs training vs user-initiated bots, or write robots.txt rules for AI. Also use when the user mentions 'AI crawler', 'robots.txt', 'GPTBot', 'blocked crawler', 'OAI-SearchBot', or 'Google-Extended'."
 ---

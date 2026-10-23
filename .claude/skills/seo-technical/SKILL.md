@@ -1,7 +1,7 @@
 ---
 name: seo-technical
 id: doddle.seo.seo-technical
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to fix technical SEO on a page or site: indexability, canonicalisation, rendering, mobile, Core Web Vitals signals, crawl paths. Also use when the user mentions 'technical SEO', 'noindex', 'canonical', 'crawl budget', 'JS rendering', 'mobile-first', 'page experience', or 'why isn't this page indexed'."
 ---

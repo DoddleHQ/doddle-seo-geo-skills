@@ -40,7 +40,7 @@ The toolkit lives at `scripts/doddle_seo/`.
 ---
 name: <skill-id>
 id: doddle.seo.<skill-id>
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When to use this skill + trigger phrases. Third person, lead with 'When the user wants …'. Include concrete keywords the user might say."
 ---
@@ -70,7 +70,7 @@ Sections 1–4 are mandatory. Reference files for depth instead of bloating `SKI
 
 ```yaml
 id: doddle.seo.<skill-id>
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "<one line>"

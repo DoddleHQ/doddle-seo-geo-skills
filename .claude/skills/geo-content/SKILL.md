@@ -1,7 +1,7 @@
 ---
 name: geo-content
 id: doddle.seo.geo-content
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to rewrite page content so AI engines can quote it — self-contained passages, answer-first sections, and evidence density. Also use when the user mentions 'make content quotable', 'AI can't quote this', 'answer-first', 'passage optimization', 'rewrite for AI search', or asks how to edit a specific page for citations."
 ---

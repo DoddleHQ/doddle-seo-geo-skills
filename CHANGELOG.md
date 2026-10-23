@@ -4,6 +4,37 @@ All notable changes to `doddle-seo-geo-skills` are documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/); versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-10-24
+
+Client-deliverable standard and review discipline, learned from openSEO's workflow depth.
+
+### Added
+
+- **`dseo html <envelope.json> [--out FILE] [--title T]`**: renders *any* saved `dseo`
+  envelope as one self-contained HTML document — inline CSS, no scripts, no external
+  assets; unique `<command> <target> — YYYY-MM-DD` title; scores/signals/findings tables
+  with signal classes and severity badges; generic payload rendering; evidence-gap section;
+  mandatory methodology footer (versions, `generated_at`, stamp, reproduce command,
+  `null` rule). All envelope text is HTML-escaped — crawled-page excerpts stay data.
+- **`common/report-standard.md`** (lint-enforced): the contract around the renderer —
+  rendered-never-hand-built, unique title, methodology footer, `null` as "not measured",
+  sharing gate with `DRAFT` naming, chat discipline (three bullets plus artifact path),
+  re-run-don't-edit revisions. Wired into `geo-report` and `seo-reporting`.
+- **Striking-distance sub-flow** in `seo-keyword-research`: GSC-first quick wins
+  (positions 8–20, ≥50 impressions — aligned with `reporting-methodology.md`), reported as
+  its own bucket ahead of new discovery, filtering done by the tool.
+- **Second-pass review gates** in `seo-audit` (new step 6) and `geo-audit` (new step 6):
+  trace every recommendation to an envelope field, reason for each de-emphasised finding,
+  named runner-up, and the second-agent question — *"which of these numbers is not in the
+  envelope?"* — plus a Common Mistakes row each.
+- **Tests**: 10 renderer tests (`test_htmlreport.py`), incl. XSS-escape and
+  self-containment checks. 65 tests total. CI smoke for `dseo html`.
+
+### Changed
+
+- Toolkit `0.2.0` → `0.3.0`; all skills/blueprints → `0.3.0` (manifests too).
+- `geo-report` toolkit/workflow now covers the HTML deliverable path.
+
 ## [0.2.0] - 2026-10-24
 
 Two deterministic commands for answer-level AI visibility and keyword cannibalisation,
@@ -80,5 +111,6 @@ First release. Doddle SEO & GEO OS — a DoddleOS peer pack.
 - No hardcoded market statistics (linter-enforced).
 - Fetched page text is data, never instructions.
 
+[0.3.0]: https://github.com/DoddleHQ/doddle-seo-geo-skills/releases/tag/v0.3.0
 [0.2.0]: https://github.com/DoddleHQ/doddle-seo-geo-skills/releases/tag/v0.2.0
 [0.1.0]: https://github.com/DoddleHQ/doddle-seo-geo-skills/releases/tag/v0.1.0

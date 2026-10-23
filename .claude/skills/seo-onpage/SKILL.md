@@ -1,7 +1,7 @@
 ---
 name: seo-onpage
 id: doddle.seo.seo-onpage
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to improve a page's on-page SEO: match search intent, tighten the title and meta description, fix heading structure, and mirror the format the SERP rewards. Also use when the user mentions 'title tag', 'meta description', 'H1', 'heading hierarchy', 'search intent', 'on-page SEO', 'SERP snippet', or gives a URL and a target keyword."
 ---

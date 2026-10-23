@@ -1,5 +1,5 @@
 id: doddle.seo.seo-competitor
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Competitor keyword-gap analysis and vs/alternatives page planning, own site scored by dseo"

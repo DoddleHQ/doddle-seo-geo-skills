@@ -13,7 +13,7 @@
 | `geo-crawlers` | `dseo robots` | geo-specialist | AI-crawler access: search vs training vs user |
 | `geo-llmstxt` | `dseo llmstxt [--generate]` | geo-specialist | Validate or draft `/llms.txt` |
 | `geo-schema` | `dseo schema` | schema-architect | Entity markup for AI (Organization/sameAs/Article) |
-| `geo-report` | `dseo report` | geo-specialist | Client-ready GEO deliverable |
+| `geo-report` | `dseo report`, `dseo html` | geo-specialist | Client-ready GEO deliverable |
 | `geo-brand-entity` | `dseo schema` + manual checklist | entity-strategist | Entity resolution and `sameAs` |
 | `geo-platform` | `dseo score` + `dseo robots` | geo-specialist | Per-engine optimisation (ChatGPT, Perplexity, AIO, Copilot, Claude, Gemini) |
 | `geo-monitor` | live `ga4.getReport` + advisory sampling | geo-specialist | AI-referral traffic and cited pages |
@@ -59,4 +59,4 @@
 ## Shared references (`.claude/skills/common/`)
 
 `response-contract.md`, `data-reliability.md`, `fundamentals.md`, `scoring-methodology.md`,
-`mcp-integration-guide.md`.
+`mcp-integration-guide.md`, `report-standard.md`.

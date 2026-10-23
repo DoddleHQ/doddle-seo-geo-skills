@@ -1,7 +1,7 @@
 ---
 name: seo-strategy
 id: doddle.seo.seo-strategy
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants an SEO strategy, roadmap, or a prioritised plan of what to do next. Also use when the user mentions 'SEO roadmap', 'SEO strategy', 'what should we do first', 'prioritise SEO', 'impact vs effort', 'SEO business case', 'where to invest in SEO', or asks which single SEO bet to make."
 ---

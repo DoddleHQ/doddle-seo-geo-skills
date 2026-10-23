@@ -1,7 +1,7 @@
 ---
 name: geo-citability
 id: doddle.seo.geo-citability
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants to know whether a single page can be cited by AI engines, or asks to improve its quotability for ChatGPT, Claude, Perplexity, Gemini or AI Overviews. Also use when the user mentions 'citability', 'quotable', 'AI can't read this page', 'passage', 'answer engine', or gives one URL and asks why it is or isn't cited."
 ---

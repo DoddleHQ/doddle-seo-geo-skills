@@ -1,5 +1,5 @@
 id: doddle.seo.seo-programmatic
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Design and guard programmatic pages at scale with template sampling and shipping gates"

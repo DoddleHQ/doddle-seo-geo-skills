@@ -139,7 +139,8 @@ def lint_common(lint: Lint) -> None:
     if not os.path.isdir(COMMON):
         lint.error("missing .claude/skills/common/")
         return
-    for required in ("response-contract.md", "data-reliability.md", "fundamentals.md", "scoring-methodology.md", "mcp-integration-guide.md"):
+    for required in ("response-contract.md", "data-reliability.md", "fundamentals.md",
+                     "scoring-methodology.md", "mcp-integration-guide.md", "report-standard.md"):
         if not os.path.isfile(os.path.join(COMMON, required)):
             lint.error(f"common: missing {required}")
 

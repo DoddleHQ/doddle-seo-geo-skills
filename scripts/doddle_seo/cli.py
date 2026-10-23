@@ -16,6 +16,7 @@ Commands::
     dseo visibility <file>    [--json] [--brand B] [--site S] [--competitors a,b]
     dseo cluster  <file>      [--json] [--threshold 0.4]
     dseo cannibalize <file>   [--json]
+    dseo html  <envelope.json> [--out FILE] [--title T]
     dseo doctor
 """
 
@@ -37,6 +38,7 @@ from .clustering import cluster_envelope, cannibalize_envelope
 from .envelope import CURRENT, make_envelope, tier_for, utc_now
 from .fetch import fetch
 from .htmlparse import parse
+from .htmlreport import render_html
 from .report import render_markdown
 from .scoring import analyze_page, score_to_envelope
 from .visibility import visibility_envelope
@@ -289,6 +291,40 @@ def cmd_cannibalize(args: argparse.Namespace) -> int:
     return 0 if env["ok"] else 1
 
 
+def cmd_html(args: argparse.Namespace) -> int:
+    try:
+        with open(args.target, encoding="utf-8") as fh:
+            env = json.load(fh)
+    except FileNotFoundError:
+        _emit({"ok": False, "command": "html", "target": args.target,
+               "error": {"message": f"envelope file not found: {args.target}",
+                         "hint": "save an envelope first: dseo <command> <target> --json > envelope.json"}},
+              _wants_json(args))
+        return 1
+    except json.JSONDecodeError as exc:
+        _emit({"ok": False, "command": "html", "target": args.target,
+               "error": {"message": f"envelope file is not valid JSON: {exc}",
+                         "hint": "render the JSON a dseo command emits with --json"}},
+              _wants_json(args))
+        return 1
+    if not isinstance(env, dict) or "command" not in env:
+        _emit({"ok": False, "command": "html", "target": args.target,
+               "error": {"message": "file is not a dseo envelope (no 'command' field)",
+                         "hint": "render the JSON envelope emitted by a dseo command, not arbitrary JSON"}},
+              _wants_json(args))
+        return 1
+    doc = render_html(env, title=args.title or "")
+    if args.out:
+        with open(args.out, "w", encoding="utf-8") as fh:
+            fh.write(doc)
+        _emit({"ok": True, "command": "html", "target": args.target, "out": args.out,
+               "summary": f"HTML report written to {args.out} ({len(doc)} bytes)"},
+              _wants_json(args))
+    else:
+        sys.stdout.write(doc)
+    return 0 if env.get("ok", True) else 1
+
+
 def cmd_doctor(args: argparse.Namespace) -> int:
     checks = [
         {"name": "python", "ok": sys.version_info >= (3, 9), "detail": sys.version.split()[0]},
@@ -361,6 +397,12 @@ def build_parser() -> argparse.ArgumentParser:
     sp = sub.add_parser("cannibalize", parents=[common],
                         help="cannibalising queries from a GSC export (CSV or JSON)")
     sp.set_defaults(func=cmd_cannibalize)
+
+    sp = sub.add_parser("html", parents=[common],
+                        help="render a saved dseo envelope as self-contained HTML")
+    sp.add_argument("--out", help="write the HTML to this path (default: stdout)")
+    sp.add_argument("--title", help="override the document title")
+    sp.set_defaults(func=cmd_html)
 
     sp = sub.add_parser("doctor", help="check the environment")
     sp.add_argument("--json", action="store_true")

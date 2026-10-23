@@ -1,5 +1,5 @@
 id: doddle.seo.geo-schema
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Resolve a site's entities for AI engines with stable @id, sameAs, knowsAbout, and machine-readable authorship"

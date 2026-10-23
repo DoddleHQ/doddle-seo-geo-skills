@@ -1,5 +1,5 @@
 id: doddle.seo.seo-keyword-research
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Intent-classified, SERP-clustered keyword research with a per-cluster URL decision"

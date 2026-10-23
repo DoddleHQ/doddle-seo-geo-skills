@@ -1,7 +1,7 @@
 ---
 name: seo-reporting
 id: doddle.seo.seo-reporting
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants an SEO performance report or forecast: organic clicks, impressions, CTR, average position and conversions, current vs previous period. Also use when the user mentions 'SEO report', 'Search Console data', 'traffic report', 'clicks and impressions', 'CTR', 'ranking changes', 'winners and losers', 'striking distance', 'keyword cannibalisation', or 'forecast organic traffic'."
 ---
@@ -27,6 +27,11 @@ Keep the two tagged separately; never blend a `live` tool figure into a determin
 Report definitions — winners/losers, CTR anomalies, striking distance, cannibalisation — and the
 forecast rules are in `references/reporting-methodology.md`. Read it when the user disputes a
 classification or asks how a forecast was built.
+
+When any output of this skill becomes a client deliverable, follow
+[`../common/report-standard.md`](../common/report-standard.md): methodology and versions stay
+attached, `null` is "not measured", the sharing gate applies before anything leaves the
+workspace, and in chat it is three bullets plus the artifact path — never the report body.
 
 ## Workflow
 

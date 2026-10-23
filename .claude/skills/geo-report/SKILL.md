@@ -1,21 +1,25 @@
 ---
 name: geo-report
 id: doddle.seo.geo-report
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user wants a client-ready GEO / AI-search report turned from a deterministic audit into a deliverable. Also use when the user mentions 'GEO report', 'AI visibility report', 'client report', 'deliverable', 'exec summary', or asks to package an audit for a stakeholder."
 ---
 
 # GEO Client Report
 
-Turn a deterministic audit into a client-ready deliverable. `dseo report` renders the markdown;
-your job is to make it readable and honest — and to add no new numbers.
+Turn a deterministic audit into a client-ready deliverable. `dseo report` renders the
+markdown; `dseo html` renders the shareable HTML; your job is to make it readable and
+honest — and to add no new numbers. The deliverable contract lives in
+[`../common/report-standard.md`](../common/report-standard.md) — read it before sending
+anything outside the workspace.
 
 ## Deterministic Toolkit
 
 ```bash
 dseo report <url> --out GEO-REPORT.md    # audit + markdown report, written to disk
 dseo report <url> --json                 # same envelope, includes the markdown string
+dseo html <envelope.json> --out GEO-REPORT.html   # self-contained HTML deliverable
 ```
 
 | You want | Add |
@@ -23,6 +27,8 @@ dseo report <url> --json                 # same envelope, includes the markdown 
 | a bigger/smaller crawl | `--max-pages 20` |
 | a local or staging site | `--allow-private` |
 | slow the crawl | `--rate 1.0` |
+| a client-facing HTML file | save the envelope (`--json > envelope.json`), then `dseo html … --out` |
+| a human document name | `--title "Acme — GEO audit, Q4"` (the date stays) |
 
 The envelope is `dseo audit`'s, with `command: "report"` and an added `markdown` field (the
 rendered report). Everything in the report — `scores`, `signals[]`, `findings[]` — is copied,
@@ -48,7 +54,15 @@ measured".
    figure must already be in the envelope.
 5. **Name what was not measured.** Carry through `completeness.missing`, `skipped_reason`, and
    `pages_failed` as gaps, not zeros.
-6. **Hand over one next command** (e.g. a drill-down on the top finding).
+6. **Render the deliverable.** Save the envelope (`--json > envelope.json`) and run
+   `dseo html envelope.json --out GEO-REPORT.html`. The renderer copies the envelope —
+   versions, stamp, methodology footer — and escapes every excerpt; never hand-edit the HTML
+   (re-run instead; see [`../common/report-standard.md`](../common/report-standard.md)).
+7. **Hand over one next command** (e.g. a drill-down on the top finding).
+
+Before the file leaves the workspace, follow the standard's sharing gate: explicit
+permission for this artifact, `DRAFT` in the filename while it is a draft, and in chat
+three bullets plus the path — never the report body.
 
 ## Response Contract
 

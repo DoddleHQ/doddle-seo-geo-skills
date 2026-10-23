@@ -1,7 +1,7 @@
 ---
 name: seo-keyword-clustering
 id: doddle.seo.seo-keyword-clustering
-version: 0.2.0
+version: 0.3.0
 blueprint: ./blueprint.yaml
 description: "When the user has recorded SERP results or a Search Console export and wants keywords grouped into same-intent clusters, plus cannibalisation found: which queries split across multiple pages. Also use when the user mentions 'keyword clustering', 'SERP overlap clustering', 'cannibalisation', 'cannibalization', 'keywords competing with each other', 'one query ranking multiple pages', 'which pages to merge', or asks which keywords belong on one page."
 ---

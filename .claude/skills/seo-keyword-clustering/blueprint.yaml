@@ -1,5 +1,5 @@
 id: doddle.seo.seo-keyword-clustering
-version: 0.2.0
+version: 0.3.0
 kind: skill
 engine: doddle-os>=1.0
 description: "Group keywords by recorded SERP-overlap and detect cannibalisation from a GSC export, with URL actions labelled advisory"

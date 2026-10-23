@@ -62,6 +62,7 @@ python3 scripts/dseo version
 | `dseo visibility <file> [--brand --site --competitors]` | Mention/citation rates from recorded AI answers, competitor gaps, per-engine breakdown |
 | `dseo cluster <file> [--threshold 0.4]` | SERP-overlap keyword clusters with mixed-intent flags |
 | `dseo cannibalize <file>` | GSC queries split across pages, impressions at risk, contested splits |
+| `dseo html <envelope.json> [--out FILE] [--title T]` | Self-contained HTML deliverable rendered from any envelope |
 | `dseo doctor` | Environment check |
 
 Output is JSON when piped (`--json` is belt-and-braces). Every envelope carries

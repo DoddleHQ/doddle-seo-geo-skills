@@ -12,7 +12,7 @@ Public entry points:
 
 from __future__ import annotations
 
-TOOLKIT_VERSION = "0.2.0"
+TOOLKIT_VERSION = "0.3.0"
 SCORING_VERSION = "geo-1"
 DATA_VERSION = "ai-crawlers-2026-10-2"
 
